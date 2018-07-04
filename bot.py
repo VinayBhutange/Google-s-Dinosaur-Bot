@@ -5,6 +5,7 @@ import time
 from numpy import *
 
 class Coordinates():
+# THE Coordinates may differ due to different size
     replaybtn = (340,390)
     dinosaur = (171,395)
 
@@ -21,6 +22,7 @@ def press_Space():
     pyautogui.keyDown('down')
 
 def image_grab():
+# Here also ,THE Coordinates may differ due to different size
     box = (Coordinates.dinosaur[0]+60,Coordinates.dinosaur[1],Coordinates.dinosaur[0]+150,Coordinates.dinosaur[1]+5 )
     image = ImageGrab.grab(box)
     grayImage = ImageOps.grayscale(image)
